@@ -1,0 +1,246 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff7f50 0%, #ff4500 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #e60023;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+#cart button {
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+#cart button:hover {
+    background-color: #ff9900;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.product {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #e60023;
+}
+
+.product p {
+    font-size: 1.4rem;
+    color: #ff4500;
+}
+
+button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+#cart-modal h2, #payment-modal h2 {
+    color: #e60023;
+    font-size: 1.8rem;
+}
+
+footer {
+    background-color: #e60023;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+
+/* Payment Modal Styles */
+#payment-modal {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+#payment-modal h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#payment-modal p {
+    color: #777;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#payment-modal input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+#payment-modal input:focus {
+    border-color: #f5a623;
+    outline: none;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#payment-modal button {
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#payment-modal button:hover {
+    background-color: #e6951c;
+}
+
+#payment-modal button:active {
+    background-color: #cc8420;
+}
+
+#payment-modal .payment-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#payment-modal .payment-icons img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+#payment-modal .payment-icons img:hover {
+    filter: grayscale(0%);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* styles.css */
+
+#timer {
+    font-size: 24px; /* Ukuran font untuk timer */
+    color: #ff0000; /* Warna merah untuk menarik perhatian */
+    transition: transform 0.5s, opacity 0.5s; /* Transisi untuk animasi */
+}
+
+.timer-animation {
+    transform: scale(1.5); /* Besarkan ukuran teks saat waktu berkurang */
+    opacity: 0.5; /* Sedikit transparan saat berkurang */
+}
+

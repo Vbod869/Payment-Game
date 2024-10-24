@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Snack Shop</h1>
+        <div id="cart">
+            <button onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="product" data-name="Chips" data-price="2.50">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVyZ2VyfHx8fHx8MTY4NDQyNjg1OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Chips">
+                <h2>Burger Gourmet</h2>
+                <p>$5.50</p>
+                <button onclick="addToCart('Burger Gourmet', 5.50)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Cookies" data-price="3.00">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGl6emF8fHx8fHwxNjg0NDI2ODIw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Pizza" class="product-image" alt="Cookies">
+                <h2>Pizza</h2>
+                <p>$10.00</p>
+                <button onclick="addToCart('Pizza', 10.00)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Candy" data-price="1.75">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c2FsYWR8fHx8fHwxNjg0NDI2OTIx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Candy">
+                <h2>Fresh Salad</h2>
+                <p>$7.75</p>
+                <button onclick="addToCart('Fresh Salad', 7.75)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal hidden">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button class="button-secondary" onclick="clearCart()">Clear Cart</button>
+        <button id="checkout" class="button-primary hidden" onclick="checkout()">Checkout</button>
+    </div>
+
+    <div id="payment-modal" class="modal hidden">
+        <h2>Guess the Riddle</h2>
+        <p id="riddle-question"></p>
+        <p>Time left: <span id="timer">10</span> seconds</p>
+        <input type="text" id="riddle-input" placeholder="Your answer here">
+        <button onclick="checkRiddleAnswer()">Submit Answer</button> <!-- Button to submit the riddle answer -->
+         <!-- Button to start the game -->
+        <p id="game-message"></p> <!-- Message to display feedback -->
+    </div>
+    
+    
+
+    <footer>
+        <p>© 2024 Snack Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <script src="sc.js"></script>
+</body>
+</html>
